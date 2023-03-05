@@ -38,12 +38,8 @@ public class ClienteController {
 
 
         if (cliente != null) {
-
-
             return ResponseEntity.ok(cliente);
         } else {
-
-
             return ResponseEntity.notFound().build();
         }
     }

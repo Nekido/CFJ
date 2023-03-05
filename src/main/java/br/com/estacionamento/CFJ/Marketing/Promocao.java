@@ -1,15 +1,11 @@
 package br.com.estacionamento.CFJ.Marketing;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Table;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.Column;
+
+import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import javax.annotation.Nullable;
+
 
 
 @Entity

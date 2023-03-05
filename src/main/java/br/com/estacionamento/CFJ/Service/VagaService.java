@@ -22,7 +22,7 @@ public class VagaService {
     }
 
     public void removerVaga(Long id) {
-        vagaRepository.deletebyId (id);
+        vagaRepository.deleteById(id);
     }
 
     public Vaga buscarVaga(Long id) {
