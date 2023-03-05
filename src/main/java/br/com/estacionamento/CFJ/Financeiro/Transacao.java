@@ -1,12 +1,6 @@
 package br.com.estacionamento.CFJ.Financeiro;
 
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Table;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.Column;
+import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -20,10 +14,8 @@ public class Transacao {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
     @Column(nullable = false)
     private BigDecimal valor;
-
 
     @Column(nullable = false)
     private LocalDate data;

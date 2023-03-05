@@ -1,8 +1,6 @@
 package br.com.estacionamento.CFJ.Service;
 
-
-
-import br.com.estacionamento.CFJ.Cliente.Cliente;
+import br.com.estacionamento.CFJ.Model.Cliente;
 import br.com.estacionamento.CFJ.Repository.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,10 +1,9 @@
 package br.com.estacionamento.CFJ.Controller;
 
 
-import br.com.estacionamento.CFJ.Cliente.Cliente;
+import br.com.estacionamento.CFJ.Model.Cliente;
 import br.com.estacionamento.CFJ.Service.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

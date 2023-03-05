@@ -1,17 +1,14 @@
 package br.com.estacionamento.CFJ.Model;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Table;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.Column;
+
+import jakarta.persistence.*;
+
 import java.time.LocalDate;
 
 @Entity
 @Table(name = "clientes")
-public class ClienteModel {
+public class Cliente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,11 +23,22 @@ public class ClienteModel {
     @Column(nullable = false)
     private LocalDate dataNascimento;
 
+    @Column(nullable = false)
+    private String telefone;
 
-    public ClienteModel(String nome, String cpf, LocalDate dataNascimento) {
+    @Column(nullable = false)
+    private String email;
+
+
+    public Cliente() {
+    }
+
+    public Cliente(String nome, String cpf, LocalDate dataNascimento, String telefone, String email) {
         this.nome = nome;
         this.cpf = cpf;
         this.dataNascimento = dataNascimento;
+        this.telefone = telefone;
+        this.email = email;
     }
 
     public Long getId() {
@@ -63,5 +71,21 @@ public class ClienteModel {
 
     public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
