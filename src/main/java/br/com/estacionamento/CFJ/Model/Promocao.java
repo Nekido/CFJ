@@ -32,6 +32,10 @@ public class Promocao {
     @Column(nullable = false)
     private LocalDate dataFim;
 
+    public Promocao() {
+
+    }
+
     public Promocao(String nome, String descricao, BigDecimal valorDesconto, LocalDate dataInicio, LocalDate dataFim) {
         this.nome = nome;
         this.descricao = descricao;

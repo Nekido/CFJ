@@ -13,7 +13,7 @@ public class ClienteService {
     private ClienteRepository clienteRepository;
 
     public List<Cliente> listarClientes() {
-        return clienteRepository.findAll();
+        return (List<Cliente>) clienteRepository.findAll();
     }
 
     public Cliente buscarClientePorId(Long id) {

@@ -11,13 +11,17 @@ public class Vaga {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private final Integer CAPACIDADETOTAL = 200;
+
     @Column(nullable = false)
     private String nome;
 
     @Column(nullable = false)
     private Boolean ocupada;
 
+    public Vaga() {
 
+    }
 
     public Vaga(String nome, Boolean ocupada) {
         this.nome = nome;

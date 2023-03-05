@@ -20,6 +20,10 @@ public class Transacao {
     @Column(nullable = false)
     private LocalDate data;
 
+    public Transacao() {
+
+    }
+
 
     public Transacao(BigDecimal valor, LocalDate data) {
 

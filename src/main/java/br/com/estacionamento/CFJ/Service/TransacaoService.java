@@ -12,7 +12,7 @@ public class TransacaoService {
     private TransacaoRepository transacaoRepository;
 
     public List<Transacao> listarTransacoes() {
-        return transacaoRepository.findAll();
+        return (List<Transacao>) transacaoRepository.findAll();
     }
 
     public Transacao buscarTransacao(Long id) {
