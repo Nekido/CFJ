@@ -1,7 +1,7 @@
 package br.com.estacionamento.CFJ.Controller;
 
 import br.com.estacionamento.CFJ.Service.VagaService;
-import br.com.estacionamento.CFJ.Vagas.Vaga;
+import br.com.estacionamento.CFJ.Model.Vaga;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

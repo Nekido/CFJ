@@ -1,7 +1,7 @@
 package br.com.estacionamento.CFJ.Service;
 
 
-import br.com.estacionamento.CFJ.Marketing.Promocao;
+import br.com.estacionamento.CFJ.Model.Promocao;
 import br.com.estacionamento.CFJ.Repository.PromocaoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package br.com.estacionamento.CFJ.Financeiro;
+package br.com.estacionamento.CFJ.Model;
 
 import jakarta.persistence.*;
 

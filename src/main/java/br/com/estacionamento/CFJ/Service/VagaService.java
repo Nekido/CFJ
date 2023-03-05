@@ -2,7 +2,7 @@ package br.com.estacionamento.CFJ.Service;
 
 
 import br.com.estacionamento.CFJ.Repository.VagaRepository;
-import br.com.estacionamento.CFJ.Vagas.Vaga;
+import br.com.estacionamento.CFJ.Model.Vaga;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package br.com.estacionamento.CFJ.Vagas;
+package br.com.estacionamento.CFJ.Model;
 
 import jakarta.persistence.*;
 
