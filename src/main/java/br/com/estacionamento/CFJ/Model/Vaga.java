@@ -2,7 +2,6 @@ package br.com.estacionamento.CFJ.Model;
 
 import jakarta.persistence.*;
 
-
 @Entity
 @Table(name = "vagas")
 public class Vaga {
@@ -13,18 +12,17 @@ public class Vaga {
 
     private final Integer CAPACIDADETOTAL = 200;
 
-    @Column(nullable = false)
-    private String nome;
+    private Integer vagasCriadas = 0;
+
+    private Integer capacidadeAtual;
 
     @Column(nullable = false)
     private Boolean ocupada;
 
     public Vaga() {
-
     }
 
-    public Vaga(String nome, Boolean ocupada) {
-        this.nome = nome;
+    public Vaga(Boolean ocupada) {
         this.ocupada = ocupada;
     }
 
@@ -37,14 +35,6 @@ public class Vaga {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
     public Boolean getOcupada() {
         return ocupada;
     }
@@ -52,4 +42,27 @@ public class Vaga {
     public void setOcupada(Boolean ocupada) {
         this.ocupada = ocupada;
     }
+
+    public Integer getCAPACIDADETOTAL() {
+        return CAPACIDADETOTAL;
+    }
+
+    public Integer getVagasCriadas() {
+        return vagasCriadas;
+    }
+
+    public void setVagasCriadas(Integer vagasCriadas) {
+        this.vagasCriadas = vagasCriadas;
+    }
+
+    public Integer getCapacidadeAtual() {
+        return capacidadeAtual;
+    }
+
+    public void setCapacidadeAtual(Integer capacidadeAtual) {
+        this.capacidadeAtual = capacidadeAtual;
+    }
+
+
+
 }

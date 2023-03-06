@@ -2,15 +2,19 @@ package br.com.estacionamento.CFJ.Service;
 
 import br.com.estacionamento.CFJ.Model.Cliente;
 import br.com.estacionamento.CFJ.Repository.ClienteRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class ClienteService {
-    @Autowired
-    private ClienteRepository clienteRepository;
+
+    private final ClienteRepository clienteRepository;
+
+    public ClienteService(ClienteRepository clienteRepository) {
+        this.clienteRepository = clienteRepository;
+    }
 
     public List<Cliente> listarClientes() {
         return (List<Cliente>) clienteRepository.findAll();

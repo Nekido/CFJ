@@ -2,14 +2,17 @@ package br.com.estacionamento.CFJ.Service;
 
 import br.com.estacionamento.CFJ.Model.Transacao;
 import br.com.estacionamento.CFJ.Repository.TransacaoRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
 public class TransacaoService {
-    @Autowired
-    private TransacaoRepository transacaoRepository;
+
+    private final TransacaoRepository transacaoRepository;
+
+    public TransacaoService(TransacaoRepository transacaoRepository) {
+        this.transacaoRepository = transacaoRepository;
+    }
 
     public List<Transacao> listarTransacoes() {
         return (List<Transacao>) transacaoRepository.findAll();

@@ -2,7 +2,6 @@ package br.com.estacionamento.CFJ.Controller;
 
 import br.com.estacionamento.CFJ.Model.Transacao;
 import br.com.estacionamento.CFJ.Service.TransacaoService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
@@ -10,8 +9,11 @@ import java.util.List;
 @RequestMapping("/transacoes")
 public class TransacaoController {
 
-    @Autowired
-    private TransacaoService transacaoService;
+    private final TransacaoService transacaoService;
+
+    public TransacaoController(TransacaoService transacaoService) {
+        this.transacaoService = transacaoService;
+    }
 
     @GetMapping
     public List<Transacao> listar() {
