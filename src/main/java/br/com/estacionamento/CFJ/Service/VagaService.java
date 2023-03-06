@@ -4,6 +4,8 @@ import br.com.estacionamento.CFJ.Repository.VagaRepository;
 import br.com.estacionamento.CFJ.Model.Vaga;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class VagaService {
 
@@ -35,11 +37,16 @@ public class VagaService {
         return vagaRepository.save(vagaAtualizada);
     }
 
+    public List<Vaga> buscarVagas() {
+        return (List<Vaga>) vagaRepository.findAll();
+    }
+
+    public Vaga buscarVagaPorId(Long id) {
+        return vagaRepository.findById(id).orElse(null);
+    }
+
     public void removerVaga(Long id) {
         vagaRepository.deleteById(id);
     }
 
-    public Vaga buscarVaga(Long id) {
-        return vagaRepository.findById(id).orElse(null);
-    }
 }

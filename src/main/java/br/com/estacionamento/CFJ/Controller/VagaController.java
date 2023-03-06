@@ -4,6 +4,8 @@ import br.com.estacionamento.CFJ.Service.VagaService;
 import br.com.estacionamento.CFJ.Model.Vaga;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/vagas")
 public class VagaController {
@@ -24,13 +26,19 @@ public class VagaController {
         return vagaService.atualizarVaga(id, vaga);
     }
 
+    @GetMapping("")
+    public List<Vaga> buscarVagas() {
+        return vagaService.buscarVagas();
+    }
+
+    @GetMapping("/{id}")
+    public Vaga buscarVagaPorId(@PathVariable Long id) {
+        return vagaService.buscarVagaPorId(id);
+    }
+
     @DeleteMapping("/{id}")
     public void removerVaga(@PathVariable Long id) {
         vagaService.removerVaga(id);
     }
 
-    @GetMapping("/{id}")
-    public Vaga buscarVaga(@PathVariable Long id) {
-        return vagaService.buscarVaga(id);
-    }
 }
