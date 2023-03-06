@@ -26,7 +26,6 @@ public class Vaga {
         this.ocupada = ocupada;
     }
 
-
     public Long getId() {
         return id;
     }

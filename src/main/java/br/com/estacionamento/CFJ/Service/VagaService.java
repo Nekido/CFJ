@@ -14,15 +14,15 @@ public class VagaService {
     }
 
     public Vaga adicionarVaga(Vaga vaga) {
-        long vagasCriadas = vagaRepository.count();
+        long vagasCadastradas = vagaRepository.count();
 
-        if (vagasCriadas == 0) {
+        if (vagasCadastradas == 0) {
             vaga.setVagasCriadas(1);
             vaga.setCapacidadeAtual(199);
-        } else if (vagasCriadas == 200) {
+        } else if (vagasCadastradas == 200) {
             throw new IllegalStateException("Todas as vagas já foram cadastradas!");
         } else {
-            vaga.setVagasCriadas(Math.toIntExact(vagasCriadas += 1));
+            vaga.setVagasCriadas(Math.toIntExact(vagasCadastradas += 1));
             vaga.setCapacidadeAtual(vaga.getCAPACIDADETOTAL() - vaga.getVagasCriadas());
         }
 
